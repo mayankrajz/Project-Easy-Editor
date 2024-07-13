@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  </head>
+  <body>
+    <div class="container disable">
+        <h2>IMAGE EDITOR</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">FILTERS</label>
+                    <div class="options">
+                        
+                        <!-- Create all the filters button here -->
+                         <button id="brightness" class="active">Brightness</button>
+                         <button id="saturation">Saturation</button>
+                         <button id="inversion">Inversion</button>
+                         <button id="grayscale">Black & White</button>
+                        
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">ROTATE & FLIP</label>
+                    <div class="options">
+                        <!-- Create all rotate and flips button here -->
+                         <button id="left"><i class="material-icons">undo</i></button>
+                         <button id="right"><i class="material-icons">redo</i></button>
+                         <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
+                         <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
+
+                    </div>
+                </div>
+            </div>
+           <!-- Add the first showing UI image here -->
+            <div class="preview-img">
+                <img src="https://aviftojpg.in/image-editor/image-placeholder.jpg" alt="preview-img">
+            </div>
+        </div>
+        <!-- Create the reset filters, choose and save button here -->
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                 <button class="choose-img">Choose Image</button>
+                 <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
